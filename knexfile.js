@@ -1,4 +1,4 @@
-require('dotenv').config();
+
 module.exports = {
       development: {
         client: process.env.DB_CLIENT,
