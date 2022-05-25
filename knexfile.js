@@ -1,11 +1,18 @@
-const credentials = require("./config/db_config.js");
-
+require('dotenv').config();
 module.exports = {
-  development: {
-    client: 'postgres',
-    connection: process.env.DATABASE_URL+'?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory',ssl: {require:false, rejectUnauthorized: false },
-    
-    
-  }
-  
-};
+      development: {
+        client: process.env.DB_CLIENT,
+        connection: {
+          host: process.env.DB_HOST,
+          user: process.env.DB_USER,
+          password: process.env.DB_PASSWORD,
+          database: process.env.DB_NAME
+        },
+        migrations: {
+          directory: __dirname + '/migrations/'
+        },
+        seeds: {
+          directory: __dirname +"./seeds"
+        }
+      }
+    };
