@@ -1,5 +1,7 @@
 const express = require("express");
 const app = express();
+const environment = process.env.NODE_ENV || 'development';
+
 
 const cors = require("cors");
 const apiRoutes = require("./routes/api");

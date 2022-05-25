@@ -1,4 +1,4 @@
-require('dotenv').config({path: 'path-to-.env'})
+
 exports.seed = function (knex) {
   return knex("watchlink")
     .del()
