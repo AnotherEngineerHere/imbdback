@@ -7,6 +7,9 @@ module.exports = {
       database: credentials.database,
       user: credentials.user,
       password: credentials.password,
+      ssl: true
     },
+    
   },
+  
 };
