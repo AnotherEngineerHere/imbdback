@@ -1,5 +1,5 @@
 const credentials = require("./config/db_config.js");
-const pgp = require('pg-promise')();
+const pgp = require('pg-promise');
 module.exports = {
   production: {
     client: 'postgres',
