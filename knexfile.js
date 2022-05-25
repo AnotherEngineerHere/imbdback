@@ -1,14 +1,12 @@
-module.exports = {  
-    client: "pg",
+const credentials = require("./config/db_config.js");
+
+module.exports = {
+  development: {
+    client: "postgres",
     connection: {
-      connectionString: process.env.DATABASE_URL,
-      ssl: { rejectUnauthorized: false },
+      database: credentials.database,
+      user: credentials.user,
+      password: credentials.password,
     },
-    migrations: {
-      directory: __dirname + "/migrations",
-    },
-    seeds: {
-      directory: __dirname + "/seeds",
-    },
-  
+  },
 };

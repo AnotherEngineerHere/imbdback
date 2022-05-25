@@ -1,25 +1,8 @@
+
 module.exports = {
-  "development": {
-    "username": process.env.PG_USER,
-    "password": process.env.PG_PASSWORD,
-    "database": process.env.PG_DATABASE,
-    "host": process.env.PG_HOST,
-    "port": process.env.PG_PORT,
-    "dialect": "postgres",
-    "operatorsAliases": false
-  },
-  "test": {
-    "username": process.env.PG_USER,
-    "password": process.env.PG_PASSWORD,
-    "database": process.env.PG_DATABASE,
-    "host": process.env.PG_HOST,
-    "port": process.env.PG_PORT,
-    "dialect": "postgres",
-    "operatorsAliases": false
-  },
-  "production": {
-    "use_env_variable": "DATABASE_URL",
-    "dialect": "postgres",
-    "operatorsAliases": false
-  }
-}
+  host: 'ec2-52-204-195-41.compute-1.amazonaws.com',
+  port: 5432,
+  user: 'ibmmeqovkmutbx',
+  password: '2fc52ab6d8d4a0238aa7306ccb667f332a14c118ef05e3f62edd4b59fc0ccd87',
+  database: 'da3ok3eb9ofd29'
+};
