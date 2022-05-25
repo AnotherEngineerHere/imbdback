@@ -1,5 +1,4 @@
 const credentials = require("./config/db_config.js");
-require('dotenv')
 module.exports = {
   development: {
     client: "postgres",
