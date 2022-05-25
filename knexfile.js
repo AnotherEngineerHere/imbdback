@@ -1,6 +1,6 @@
 module.exports = {
 
-  test: {
+  development: {
     client: config.DB_DIALECT,
     connection: {
       host      : process.env.DB_HOST,
@@ -23,7 +23,7 @@ module.exports = {
       timezone  : config.GLOBAL_TIME_ZONE
     },
     migrations: {
-      tableName: migrationTable
+      directory: "./migrations"
     }
   },
   
@@ -37,7 +37,7 @@ module.exports = {
       timezone  : config.GLOBAL_TIME_ZONE
     },
     migrations: {
-      tableName: migrationTable
+      directory: "./migrations"
     }
   },
 
@@ -51,7 +51,7 @@ module.exports = {
       timezone  : config.GLOBAL_TIME_ZONE
     },
     migrations: {
-      tableName: migrationTable
+      directory: "./migrations"
     }
   }
 
