@@ -9,7 +9,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: ["http://localhost:9090", "http://localhost:3000"],
+    origin: ["https://imbdback.herokuapp.com", "http://localhost:3000"],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     credentials: true,
   })
@@ -36,7 +36,7 @@ app.use(
 app.use("/api", apiRoutes);
 
 // Start the server
-const server = app.listen(5000, (error) => {
+const server = app.listen( process.env.PORT || 3000, (error) => {
   if (error) {
     console.log("Error in the server");
   }
