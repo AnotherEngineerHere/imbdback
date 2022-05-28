@@ -8,5 +8,11 @@ module.exports = {
       user: credentials.user,
       password: credentials.password,
     },
+    migrations: {
+      directory: __dirname + './knex/migrations',
+    },
+    seeds: {
+      directory: __dirname + './knex/seeds'
+    }
   },
 };
