@@ -1,11 +1,8 @@
 
-const credentials = require("./config/db_config.js");
-
 module.exports = {
-
+  development: {
     client: "postgres",
-    connection:"postgres://vwsbssou:8BgM-mUoVXB1ag7ZOFNym-AC5lwPzpgn@fanny.db.elephantsql.com/vwsbssou"
-    
+    connection:"postgres://qhxdeefg:x9l_ebaMv1ekKUSuKjiwdHLCI483D0yu@fanny.db.elephantsql.com/qhxdeefg"
+    },
    
 };
-
