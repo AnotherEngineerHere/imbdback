@@ -8,11 +8,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 const corsOptions ={
-  origin: ["https://imbdback.herokuapp.com", "cute-longma-6de859.netlify.app"],
+  origin: ["https://main--cute-longma-6de859.netlify.app/"],
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
-  credentials: false,
-  origin:'*', 
-  credentials:true,            //access-control-allow-credentials:true
   optionSuccessStatus:200,
 }
 
