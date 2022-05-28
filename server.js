@@ -36,7 +36,7 @@ app.use(
 app.use("/api", apiRoutes);
 
 // Start the server
-const server = app.listen(9090, (error) => {
+const server = app.listen(, (error) => {
   if (error) {
     console.log("Error in the server");
   }
