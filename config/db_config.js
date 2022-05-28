@@ -1,8 +1,8 @@
 
 module.exports = {
-  host: 'ec2-52-204-195-41.compute-1.amazonaws.com',
+  host: 'fanny.db.elephantsql.com',
   port: process.env.PORT || 5432,
-  user: 'ibmmeqovkmutbx',
-  password: '2fc52ab6d8d4a0238aa7306ccb667f332a14c118ef05e3f62edd4b59fc0ccd87',
-  database: 'da3ok3eb9ofd29'
+  user: 'vwsbssou',
+  password: '8BgM-mUoVXB1ag7ZOFNym-AC5lwPzpgn',
+  database: 'vwsbssou'
 };
