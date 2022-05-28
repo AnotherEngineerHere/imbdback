@@ -7,12 +7,13 @@ const apiRoutes = require("./routes/api");
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-const corsOptions ={
-  origin: ["https://main--cute-longma-6de859.netlify.app/"],
-  methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
-}
-
-app.use(cors(corsOptions)) // Use this after the variable declaration
+app.use(
+  cors({
+    origin: ["http://localhost:9090", "http://localhost:3000"],
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+    credentials: true,
+  })
+);
 
 
 const Knex = require("knex");
