@@ -33,7 +33,7 @@ app.use(
   session({
     secret: `secret-key`,
     resave: true,
-    saveUninitialized: true,
+    saveUninitialized: false,
   })
 );
 
