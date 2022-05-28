@@ -9,7 +9,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: ["*"],
+    origin: ["https://imbdback.herokuapp.com", "https://cute-longma-6de859.netlify.app"],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     credentials: false,
     mode:"no-cors"
