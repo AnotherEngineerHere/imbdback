@@ -9,10 +9,10 @@ module.exports = {
       password: credentials.password,
     },
     migrations: {
-      directory: '/knex/migrations',
+      directory: __dirname + './migrations',
     },
     seeds: {
-      directory: '/knex/seeds'
+      directory: __dirname + './seeds'
     }
   },
 };
