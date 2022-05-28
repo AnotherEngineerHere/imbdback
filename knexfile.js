@@ -1,7 +1,7 @@
 const credentials = require("./config/db_config.js");
 
 module.exports = {
-  development: {
+  production: {
     client: "postgres",
     connection: {
       database: credentials.database,
