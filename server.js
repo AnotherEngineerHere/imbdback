@@ -9,12 +9,11 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: ["https://imbdback.herokuapp.com", "https://cute-longma-6de859.netlify.app","http://localhost:3000" ],
+    origin: ["https://imbdback.herokuapp.com", "http://localhost:3000"],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     credentials: true,
   })
 );
-
 
 const Knex = require("knex");
 const knexFile = require("./knexfile.js");
@@ -29,20 +28,17 @@ const session = require("express-session");
 app.use(
   session({
     secret: `secret-key`,
-    resave: true,
-    saveUninitialized: false,
+    resave: false,
+    saveUninitialized: true,
   })
 );
-
 
 app.use("/api", apiRoutes);
 
 // Start the server
-const server = app.listen( process.env.PORT || 3000, (error) => {
+const server = app.listen(9090, (error) => {
   if (error) {
     console.log("Error in the server");
   }
   console.log("Server is running on port", server.address().port);
 });
-
-//Commited

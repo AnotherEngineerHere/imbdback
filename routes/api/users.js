@@ -12,7 +12,6 @@ router.get("/isloggedin", async (req, res) => {
   if (!req.session.user) {
     return res.status(403).send({ response: "Not logged in" });
   }
-  alert("No has entrado")
   return res
     .send({ user: req.session.user, response: "Authenticated" });
 });
