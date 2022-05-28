@@ -11,7 +11,7 @@ app.use(
   cors({
     origin: ["https://imbdback.herokuapp.com", "cute-longma-6de859.netlify.app"],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
-    credentials: true,
+    credentials: false,
   })
 );
 
