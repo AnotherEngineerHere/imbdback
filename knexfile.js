@@ -1,48 +1,12 @@
+const credentials = require("./config/db_config.js");
+
 module.exports = {
   development: {
-    client: 'pg',
+    client: "postgres",
     connection: {
-      host : '127.0.0.1',
-      user : '[db_username]',
-      password : '[db_password]',
-      database : '[db_name]',
-      charset: 'utf8'
+      database: credentials.database,
+      user: credentials.user,
+      password: credentials.password,
     },
-    migrations: {
-      directory: __dirname + '/knex/migrations',
-    },
-    seeds: {
-      directory: __dirname + '/knex/seeds'
-    }
   },
-  staging: {
-    client: 'postgresql',
-    connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
-    },
-    pool: {
-      min: 2,
-      max: 10
-    },
-    migrations: {
-      tableName: 'knex_migrations'
-    }
-  },
-  production: {
-    client: 'postgresql',
-    connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
-    },
-    pool: {
-      min: 2,
-      max: 10
-    },
-    migrations: {
-      tableName: 'knex_migrations'
-    }
-  }
 };
