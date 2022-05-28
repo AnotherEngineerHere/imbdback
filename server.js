@@ -36,7 +36,7 @@ app.use(
 app.use("/api", apiRoutes);
 
 // Start the server
-const server = app.listen(, (error) => {
+const server = app.listen(process.env.PORT || 3000 , (error) => {
   if (error) {
     console.log("Error in the server");
   }
