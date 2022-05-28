@@ -10,7 +10,6 @@ app.use(express.json());
 const corsOptions ={
   origin: ["https://main--cute-longma-6de859.netlify.app/"],
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
-  optionSuccessStatus:200,
 }
 
 app.use(cors(corsOptions)) // Use this after the variable declaration
@@ -33,6 +32,7 @@ app.use(
     saveUninitialized: false,
   })
 );
+
 
 app.use("/api", apiRoutes);
 
