@@ -9,9 +9,9 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: ["*"],
+    origin: ["https://imbdback.herokuapp.com", "https://cute-longma-6de859.netlify.app","http://localhost:3000/",],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
-    credentials: true,
+    credentials: "include",
   })
 );
 
